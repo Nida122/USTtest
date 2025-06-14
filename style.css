@@ -1,0 +1,196 @@
+body {
+  background: #2a2a2a;
+  color: #fff;
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === ナビゲーションバー & SNS === */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 0 2rem;
+}
+
+.main-nav ul.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #0ff;
+  text-shadow: 1px 0 red, -1px 0 blue;
+}
+
+.sns-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.sns-icons a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+}
+
+.sns-icons img {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.sns-icons img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* === タイトルやカードの共通スタイル === */
+h1.glitch-text {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  color: #fff;
+}
+
+.module-tag {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #888;
+  margin-left: 0.5rem;
+}
+
+.mode-banner {
+  font-family: monospace;
+  color: #aaa;
+  background: #111;
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1rem;
+}
+
+.console-meta {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #0ff;
+  text-align: center;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #444;
+  padding: 1.2rem;
+  border-radius: 12px;
+  max-width: 300px;
+  flex: 1 1 260px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.name-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.play-button {
+  font-size: 1rem;
+  background: none;
+  border: 1px solid #888;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+}
+
+.play-button:hover {
+  text-shadow: 1px 0 red, -1px 0 blue;
+  transform: translate(1px, -1px);
+}
+
+.play-button.playing {
+  color: #0f0;
+  border-color: #0f0;
+  text-shadow: 1px 0 #0f0, -1px 0 #0f0;
+}
+
+.hidden-audio {
+  display: none;
+}
+
+/* === USTページ用リンク装飾 === */
+.ust-title a {
+  position: relative;
+  color: #8af6e4;
+  text-decoration: none;
+}
+
+.ust-title a::after {
+  content: attr(data-glitch);
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  color: #ff3cac;
+  z-index: -1;
+  opacity: 0.6;
+  animation: glitch-move 2.5s infinite ease-in-out;
+}
+
+@keyframes glitch-move {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-1px, 0); }
+  40% { transform: translate(1px, 1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(0, 1px); }
+}
+
+/* === 更新情報リスト中央揃え === */
+.update-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.update-list li {
+  margin: 6px 0;
+}

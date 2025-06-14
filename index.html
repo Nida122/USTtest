@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>電音ライブラリ | UST</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="meta-style.css">
+  <style>
+    body {
+      padding-top: 50px; /* ナビ固定のためのスペース */
+    }
+
+    .main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: #000;
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #444;
+    }
+
+    .ust-list {
+      list-style: none;
+      padding: 0 20px;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .ust-list li {
+      border-bottom: none;
+      padding: 12px 0;
+      position: relative;
+    }
+
+    .ust-list li::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(to right, #8af6e4, #ffffff);
+      opacity: 0.8;
+    }
+
+    .ust-title a {
+      font-size: 1.1rem;
+      color: #8af6e4;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .ust-title a::after {
+      content: attr(data-glitch);
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #ff00cc;
+      width: 100%;
+      overflow: hidden;
+      animation: glitch 2s infinite;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @keyframes glitch {
+      0% { clip-path: inset(0 0 90% 0); }
+      20% { clip-path: inset(10% 0 70% 0); }
+      40% { clip-path: inset(20% 0 50% 0); }
+      60% { clip-path: inset(30% 0 30% 0); }
+      80% { clip-path: inset(40% 0 10% 0); }
+      100% { clip-path: inset(0 0 90% 0); }
+    }
+
+    .ust-author {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body class="characters-page">
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="no_data_index.html">HOME</a></li>
+      <li><a href="no_data_characters.html">CHARACTERS</a></li>
+      <li><a href="ust_test.html">UST</a></li>
+    </ul>
+    <div class="sns-icons">
+      <a href="https://twitter.com/@Nosuri12_ND" target="_blank">
+        <img src="images/X.png" alt="Twitter">
+      </a>
+      <a href="https://www.youtube.com/channel/UCWE6tJdHPl3Hlw0d_1pCH8w" target="_blank">
+        <img src="images/youtube.png" alt="YouTube">
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="glitch-text">UST配布</h1>
+    <p class="intro-text">仮想システムより、UST伝送モジュールを起動中...</p>
+
+    <ul class="ust-list">
+      <li>
+        <h3 class="ust-title">
+          <a href="https://bowlroll.net/file/312395" target="_blank" data-glitch="-ライアーダンサー">-ライアーダンサー</a>
+        </h3>
+        <p class="ust-author">マサラダ 様</p>
+      </li>
+      <li>
+        <h3 class="ust-title">
+          <a href="https://bowlroll.net/file/312396" target="_blank" data-glitch="-性格悪くてすみません">-性格悪くてすみません</a>
+        </h3>
+        <p class="ust-author">青谷 様</p>
+      </li>
+      <li>
+        <h3 class="ust-title">
+          <a href="https://bowlroll.net/file/312397" target="_blank" data-glitch="-取り柄のないクズだって生きてていいだろが">-取り柄のないクズだって生きてていいだろが</a>
+        </h3>
+        <p class="ust-author">ヘルニアofficial 様</p>
+      </li>
+      <li>
+        <h3 class="ust-title">
+          <a href="https://bowlroll.net/file/312397" target="_blank" data-glitch="-新世">-新世</a>
+        </h3>
+        <p class="ust-author">巡巡 様</p>
+      </li>
+      <li>
+        <h3 class="ust-title">
+          <a href="https://bowlroll.net/file/315404" target="_blank" data-glitch="-字が汚い全ての人に捧げる歌">-字が汚い全ての人に捧げる歌</a>
+        </h3>
+        <p class="ust-author">MidLuster 様</p>
+      </li>
+      <li>
+        <h3 class="ust-title">
+          <a href="https://bowlroll.net/file/337274" target="_blank" data-glitch="-すげぇアプリ開発中">-すげぇアプリ開発中</a>
+        </h3>
+        <p class="ust-author">WONDERFUL★OPPORTUNITY! 様</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deno-On Project</p>
+  </footer>
+</body>
+</html>

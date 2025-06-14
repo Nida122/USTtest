@@ -1,0 +1,110 @@
+/* 共通レイアウト */
+main {
+  padding: 2em;
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+}
+
+/* グリッチテキスト見出し */
+.glitch-text {
+  position: relative;
+  font-size: 2.4em;
+  text-align: center;
+  margin: 1em 0 1.5em;
+  color: #8af6e4;
+  animation: glitch-flicker 1.6s infinite;
+}
+
+@keyframes glitch-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    transform: none;
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+    transform: translateX(-1px);
+  }
+  22% {
+    opacity: 0.6;
+    transform: translateX(2px);
+  }
+}
+
+/* サイト紹介・説明文 */
+.intro-text {
+  margin: 1em auto 2em;
+  color: #aaa;
+  font-size: 0.95em;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* カードベースの項目デザイン（キャラ・UST等） */
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5em;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.2em;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px #00f0ff40;
+}
+
+/* タイトルリンクのアニメーション */
+.card-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
+.card-title a {
+  color: #8af6e4;
+  text-decoration: none;
+  position: relative;
+}
+
+.card-title a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #8af6e4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-title a:hover::after {
+  transform: scaleX(1);
+}
+
+.card-text {
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* 更新情報リスト（index向け） */
+.update-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1em;
+}
+
+.update-list li {
+  font-family: monospace;
+  font-size: 0.95em;
+  color: #ccc;
+  margin-bottom: 0.3em;
+}
